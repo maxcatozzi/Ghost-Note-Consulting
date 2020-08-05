@@ -16,6 +16,8 @@
 
 # max added for security
 .env
+backend/.env
+/backend/.env
 
 .env.local
 .env.development.local
