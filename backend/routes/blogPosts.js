@@ -4,13 +4,14 @@ const passport = require('passport');
 const passportConfig = require('../passport');
 const JWT = require('jsonwebtoken');
 
-
+//gets all blog posts
 router.get('/',(req, res) => {
   BlogPost.find()
     .then(blogPosts => res.json(blogPosts))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+//allows logged in user to add a blog post
 router.post('/add', passport.authenticate('jwt',{session : false}),(req, res) => {
   const { title, body } = req.body;
   const blogPost = new BlogPost({
@@ -27,6 +28,7 @@ router.post('/add', passport.authenticate('jwt',{session : false}),(req, res) =>
   });
 });
 
+//allows a logged in user to update a blog post
 router.post('/update/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
   BlogPost.findById(req.params.id)
     .then(blogPost => {
@@ -45,20 +47,20 @@ router.post('/update/:id', passport.authenticate('jwt', { session: false }), (re
     });
 });
 
-// router.route('/add').post((req, res) => {
-//   const title = req.body.title;
-//   const body = req.body.body;
-//   // const date = Date.parse(req.body.date);
+//allows a logged in user to delete a blog post
+router.delete('/delete/:id', passport.authenticate('jwt', { session: false }), (req, res) => {
+  BlogPost.findById(req.params.id)
+    .then(blogPost => {
+      blogPost.delete(err => {
+        if (err) {
+          res.status(500).json({ message: { msgBody: "An error has occured", msgError: true } });
+        }
+        else {
+          res.status(200).json({ message: { msgBody: "Blog post has been deleted!", msgError: false } });
+        }
+      });
+    });
+});
 
-//   const newBlogPost = new BlogPost({
-//       title,
-//       body,
-//       // date,
-//     });
-  
-//   newBlogPost.save()
-//     .then(() => res.json('Blog Post added!'))
-//     .catch(err => res.status(400).json('Error: ' + err));
-// });
 
 module.exports = router;
