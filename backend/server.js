@@ -14,6 +14,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 const uri = process.env.ATLAS_URI;
+console.log(process.env);
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
