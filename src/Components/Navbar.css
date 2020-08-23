@@ -1,0 +1,63 @@
+
+.Header {
+  display: grid;
+  grid-template-areas: "logo . nav";
+  height: 70px;
+  background-color: #312d33;
+  color: #966dab;
+}
+
+.Nav {
+  grid-area: nav;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  justify-items: stretch;
+}
+
+.Logo {
+  grid-area: logo;
+  font-size: 30px;
+  text-decoration: none;
+  color: lightcyan;
+  margin-left: 3vw;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.NavLink {
+  text-decoration: none;
+  color: #966dab;
+}
+
+.Burger {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .Header {
+    grid-template-areas: "logo burger" "nav nav";
+  }
+
+  .Nav {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: none;
+    grid-row-gap: 20px;
+    background-color: black;
+    justify-items: center;
+    z-index: 2;
+    opacity: 0.9;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 0px 0px 5px 5px ;
+  }
+
+  .Burger {
+    display: block;
+  }
+
+  .Logo {
+
+  }
+}

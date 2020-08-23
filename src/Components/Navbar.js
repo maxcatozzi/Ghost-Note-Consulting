@@ -1,19 +1,32 @@
-import React from 'react';
-import "./Navbar.css";
+import React, {useState} from 'react';
+import './Navbar.css';
 import { Link } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 
 function Navbar() {
+  const test = useMediaQuery({
+    query: '(max-width: 800px)'
+  })
+
+  const [isNavVisible, setIsNavVisible] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavVisible(!isNavVisible);
+  };
+
   return (
-    <nav>
-      <Link to="/">Ghost Note Consulting</Link>
-      <div>
-        <ul>
-          <li> <Link to="/">Home</Link> </li>
-          <li> <Link to="/Blog">Blog</Link> </li>
-          <li> <Link to="/Contact">Contact Me</Link> </li>
-        </ul>
-      </div>
-    </nav>
+    <header className='Header'>
+      <Link to='/' className='Logo' >Ghost Note Consulting</Link>
+      <div  onClick={toggleNav} className='Burger'>Buger Boi</div>
+      {(!test || isNavVisible) && (
+        <nav className='Nav'>
+          <div> <Link to='/' className='NavLink'>Home</Link> </div>
+          <div><Link to='/' className='NavLink'>About Me</Link></div>
+          <div> <Link to='/Blog' className='NavLink'>Blog</Link> </div>
+          <div> <Link to='/Contact' className='NavLink'>Contact Me</Link> </div>
+        </nav>
+      )}
+    </header>
   );
 }
 
