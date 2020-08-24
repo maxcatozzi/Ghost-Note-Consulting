@@ -5,6 +5,11 @@
   height: 70px;
   background-color: #312d33;
   color: #966dab;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout:none;
 }
 
 .Nav {
@@ -26,6 +31,10 @@
   align-items: center;
 }
 
+.Icon {
+  height: 70px;
+}
+
 .NavLink {
   text-decoration: none;
   color: #966dab;
@@ -38,6 +47,7 @@
 @media (max-width: 800px) {
   .Header {
     grid-template-areas: "logo burger" "nav nav";
+    color: lightcyan;
   }
 
   .Nav {
@@ -54,7 +64,15 @@
   }
 
   .Burger {
-    display: block;
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 2vw;
+  }
+
+  .burgerOpen {
+    color: #966dab;
   }
 
   .Logo {

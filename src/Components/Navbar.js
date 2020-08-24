@@ -1,24 +1,38 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Navbar.css';
+import Hamburger from './Hamburger.js';
 import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 
+
 function Navbar() {
-  const test = useMediaQuery({
+  const smallView = useMediaQuery({
     query: '(max-width: 800px)'
   })
 
   const [isNavVisible, setIsNavVisible] = useState(false);
+  const [burgerColor, setBurgerColor] = useState('burgerClosed');
 
   const toggleNav = () => {
     setIsNavVisible(!isNavVisible);
   };
+  
+  useEffect(() => {
+    if (isNavVisible) {
+      setBurgerColor('burgerOpen');
+    }
+    else {
+      setBurgerColor('');
+    }
+  }, [isNavVisible]);
 
   return (
     <header className='Header'>
       <Link to='/' className='Logo' >Ghost Note Consulting</Link>
-      <div  onClick={toggleNav} className='Burger'>Buger Boi</div>
-      {(!test || isNavVisible) && (
+      <div className={`Burger ${burgerColor}`}>
+        <div onClick={toggleNav}><Hamburger className='Icon' /></div>
+      </div>
+      {(!smallView || isNavVisible) && (
         <nav className='Nav'>
           <div> <Link to='/' className='NavLink'>Home</Link> </div>
           <div><Link to='/' className='NavLink'>About Me</Link></div>
