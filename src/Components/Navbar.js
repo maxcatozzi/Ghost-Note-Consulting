@@ -6,8 +6,8 @@ import { useMediaQuery } from 'react-responsive';
 
 
 function Navbar() {
-  const smallView = useMediaQuery({
-    query: '(max-width: 800px)'
+  const largeView = useMediaQuery({
+    query: '(min-width: 800px)'
   })
 
   const [isNavVisible, setIsNavVisible] = useState(false);
@@ -27,12 +27,13 @@ function Navbar() {
   }, [isNavVisible]);
 
   return (
+    
     <header className='Header'>
       <Link to='/' className='Logo' >Ghost Note Consulting</Link>
       <div className={`Burger ${burgerColor}`}>
-        <div onClick={toggleNav}><Hamburger className='Icon' /></div>
+        <div onClick={toggleNav}><Hamburger className='BurgerIcon' /></div>
       </div>
-      {(!smallView || isNavVisible) && (
+      {(largeView || isNavVisible) && (
         <nav className='Nav'>
           <div> <Link to='/' className='NavLink'>Home</Link> </div>
           <div><Link to='/' className='NavLink'>About Me</Link></div>
