@@ -1,57 +1,78 @@
-.Header {
-  display: grid;
-  grid-template-areas: "logo burger" "nav nav";
+.header {
+  width:100%;
   height: 70px;
-  background-color: #312d33;
-  color: #966dab;
+  position: relative;
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout:none;
-  font-family: 'Righteous', Roboto;
-  font-size: 40px;
+
 }
 
-.Logo {
-  grid-area: logo;
-  font-size: 30px;
+.titleBar {
+  width:100%;
+  height: 100%;
+  z-index: 20;
+  position: relative;
+  background-color: #312d33;
+  color: lightcyan;
+  font-family: Righteous, Roboto;
+}
+
+.logoArea {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+}
+
+.logoContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 2vw;
+}
+
+.logo {
   text-decoration: none;
   color: lightcyan;
-  margin-left: 3vw;
-  height: 70px;
+  font-size: 30px;
+}  
+
+.burger {
   display: flex;
   align-items: center;
-}
-
-.BurgerIcon {
-  height: 70px;
-}
-
-.Burger {
-  display: flex;
-  height: 70px;
-  align-items: center;
-  justify-content: flex-end;
+  vertical-align: top;
+  height: 100%;
+  float: right;
   margin-right: 2vw;
-  color: lightcyan;
 }
 
 .burgerOpen {
   color: #966dab;
 }
 
-.NavLink {
-  text-decoration: none;
-  color: #966dab;
+.burgerIcon {
+  height: 70px;
 }
 
-.NavLink:hover {
-  color: lightcyan;
+.nav {
+  z-index: 10;
+  position: absolute;
+  display: grid;
+  grid-template-areas: "." "nav2";
+  width:100%;
+  font-family: Righteous, Roboto;
+  transform: translateY(-190px);
+  transition: transform 0.5s;
 }
 
-.Nav {
-  grid-area: nav;
+.animateNav {
+  transform: translateY(0px);
+}
+
+.navArea {
+  grid-area: nav2;
   display: grid;
   grid-template-rows: repeat(4, auto);
   grid-row-gap: 20px;
@@ -63,47 +84,33 @@
   border-radius: 0px 0px 5px 5px ;
   font-size: 21px;
   padding: 10px;
-  align-items: center;
-  transition: transform 1s;
 }
 
-/* .NavAnimation-enter {
-  opacity: 0;
-  transform: scale(0.5);
+.navLink:hover {
+  color: lightcyan;
 }
 
-.NavAnimation-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: opacity 350ms, transform 350ms;
+.navLink {
+  text-decoration: none;
+  color: #966dab;
 }
-
-.NavAnimation-exit {
-  opacity: 1;
-}
-
-.NavAnimation-exit-active {
-  opacity: 0;
-  transform: scale(0.5);
-  transition: opacity 350ms, transform 350ms;
-} */
 
 @media (min-width: 800px) {
-
-  .Header {
-    grid-template-areas: "logo . nav";
-  }  
-
-  .Burger {
+  .burger {
     display: none;
   }
-  
-  .Nav {
+
+  .nav {
+    grid-template-areas: ". . nav2";
+    transform: translateY(-55px);
+  }
+
+  .navArea {
     grid-template-columns: repeat(4, auto);
     grid-template-rows: none;
     font-size: 16px;
     justify-items: stretch;
     background-color: #312d33;
+    justify-items: right;
   }
-  
 }
