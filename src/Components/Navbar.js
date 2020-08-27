@@ -11,24 +11,34 @@ function Navbar() {
   })
 
   const [isNavVisible, setIsNavVisible] = useState(false);
-  const [burgerColor, setBurgerColor] = useState('burgerClosed');
-  const [navPosition, setNavPosition] = useState('animateNav');
+  const [burgerColor, setBurgerColor] = useState('');
+  const [navPosition, setNavPosition] = useState('');
 
   const toggleNav = () => {
-    setIsNavVisible(!isNavVisible);
+    if (!largeView) {
+      if (isNavVisible) {
+        setNavPosition('');
+        setBurgerColor('');
+        setTimeout(() => {
+          setIsNavVisible(!isNavVisible);
+        }, 500);
+      } else {
+        setIsNavVisible(!isNavVisible);
+        setTimeout(() => {
+          setNavPosition('animateNav');
+        }, 0);
+        setBurgerColor('burgerOpen');
+      }
+    }
   };
-  
-  useEffect(() => {
-    if (isNavVisible) {
-      setBurgerColor('burgerOpen');
-      setNavPosition('animateNav');
-    }
-    else {
-      setBurgerColor('');
-      setNavPosition('');
-    }
-  }, [isNavVisible]);
 
+  useEffect(() => {
+    if (largeView === true) {
+      setIsNavVisible(false);
+      setBurgerColor('');
+    }
+  },[largeView])
+  
   return (
     <header className='header'>
       <div className='titleBar'>
@@ -39,7 +49,7 @@ function Navbar() {
         </div>
         <div className={`burger ${burgerColor}`}>
           <div onClick={toggleNav}> 
-            <Hamburger className='burgerIcon' />
+            <Hamburger />
           </div>
         </div>
       </div>
@@ -47,10 +57,10 @@ function Navbar() {
       {(largeView || isNavVisible) && (
         <nav className={`nav ${navPosition}`}>
           <div className='navArea'>
-            <div> <Link to='/' className='navLink'>Home</Link> </div>
-            <div><Link to='/' className='navLink'>About Me</Link></div>
-            <div> <Link to='/Blog' className='navLink'>Blog</Link> </div>
-            <div> <Link to='/Contact' className='navLink'>Contact Me</Link> </div>
+            <div> <Link to='/' onClick={toggleNav} className='navLink'>Home</Link> </div>
+            <div><Link to='/' onClick={toggleNav} className='navLink'>About Me</Link></div>
+            <div> <Link to='/Blog' onClick={toggleNav} className='navLink'>Blog</Link> </div>
+            <div> <Link to='/Contact' onClick={toggleNav} className='navLink'>Contact Me</Link> </div>
           </div>
         </nav>
         
