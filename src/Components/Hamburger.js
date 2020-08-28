@@ -1,5 +1,4 @@
 import React from 'react';
-import './Hamburger.css'
 
 function Hamburger() {
   return (

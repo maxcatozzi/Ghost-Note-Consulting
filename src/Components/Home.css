@@ -1,0 +1,44 @@
+.recordVid {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: -2;
+}
+
+.videoContainer {
+  position: relative;
+}
+
+/* .videoOverlay {
+  width: 100%;
+  border: 1px solid red;
+  height: 400px;
+} */
+
+.foregroundLayer {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background-color: rebeccapurple;
+  opacity: 0.03;
+  z-index: -1;
+}
+
+.greeting {
+  color: lightcyan;
+  width: 30%;
+  font-size: 2vw;
+  float: right;
+  margin-top: 60px;
+  margin-right: 20px;
+  text-align: center;
+  font-family: Righteous, Roboto;
+}
+
+@media (min-width: 1990px) {
+  .videoContainer{
+    height: 1120px;
+    overflow: hidden;
+  }
+}
