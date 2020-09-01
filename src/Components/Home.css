@@ -18,33 +18,50 @@
   overflow: hidden;
 }
 
-/* .foregroundLayer {
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  height: calc(100vh - 70px);
-  background-color: rebeccapurple;
-  opacity: 0.03;
-  z-index: -2;
-} */
-
 .mainContainer {
   width: 100%;
-  height: 500px;
   transform: translateY(-4px);
-  display: flex;
-  justify-content: center;
   background-color: white;
   opacity: 0;
-  transition: opacity 1.7s;
+  transition: opacity 1.7s;  
+  position: relative;
+  z-index: -1;
+
 }
 
-.aboutMeContainer {
-  border: 4px solid #966dab;
-  border-radius: 10px;
-  width: 80%;
-  height: 400px;
+.servicesContainer {
+  width: 100%;
+  height: 500px;
   margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutMeContainer {
+  width: 100%;
+  height: 500px;
+  background-color: #d8cce0;
+}
+
+.contactContainer {
+  width: 100%;
+  height: 500px;
+  background-color: #452454;
+}
+
+.servicesContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds {
+  height: 300px;
+  margin-left: 10px;
+}
+
+.servicesText {
+  margin-right: 10px;
 }
 
 .greeting {
@@ -57,6 +74,18 @@
   left: 65vw;
   opacity: 0;
   transition: opacity 1.7s;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background-color: #312d33;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-family: Righteous, Roboto;
+  color: lightcyan;
 }
 
 @media (min-width: 1400px) {
