@@ -1,4 +1,6 @@
 .Outer {
+  position: relative;
+  top: 70px;
   display: grid;
   border: 1px solid blue;
   padding: 2PX;
