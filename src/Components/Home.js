@@ -1,6 +1,8 @@
 import React from 'react';
 import video from '../video/record_vid.mp4'; 
 import './Home.css';
+import Contact from './Contact';
+import yoda from '../assets/yoda.jpg';
 
 class Home extends React.Component {
 
@@ -26,10 +28,12 @@ class Home extends React.Component {
         </div>
         <div className='mainContainer'>
           <div className='servicesContainer'>
-            <div className='servicesContent'>
-              <div className='servicesText'>
-                <h1>Services</h1>
-                <ul>
+            <div className='sectionContent'>
+              <div className='sectionText'>
+                <div className='sectionTitle'>
+                  <h1>Services</h1>
+                </div>
+                <ul className='servicesList'>
                   <li>“Why, you stuck-up, half-witted, scruffy-looking nerf herder!” — Leia Organa</li>
                   <li>“The Force will be with you. Always.” — Obi-Wan Kenobi</li>
                   <li>“I find your lack of faith disturbing.” — Darth Vader</li>
@@ -41,10 +45,25 @@ class Home extends React.Component {
               </div>
             </div>
           </div>
-          <div className='aboutMeContainer'></div>
-          <div className='contactContainer'></div>
+          <div className='aboutMeContainer'>
+            <div className='sectionContent aboutMeContent'>
+              <div className='sectionText'>
+                <h1 className='sectionTitle'>About Me</h1>
+                <div className='aboutMeDescription'>
+                  <p>A really cool dude, Mark is. Many qualifications, he does have. Help you with all of your consulting needs, he will.</p>
+                  <p>A really cool dude, Mark is. Many qualifications, he does have. Help you with all of your consulting needs, he will.</p>
+                </div>
+              </div>
+              <div className='aboutMeImgContainer'>
+                <img
+                  className='aboutMeImg'
+                  alt='yoda'
+                  src={yoda}/>
+              </div>
+            </div>
+          </div>
+          <div className='contactContainer'><Contact /></div>
           <footer className='footer'>© 2020 by Kayax
-           
           </footer>
         </div>
       </div>

@@ -1,6 +1,7 @@
 .homeContainer {
   position: relative;
-  top: 70px;
+  z-index: -1;
+  top: 50px;
 }
 
 .recordVid {
@@ -18,6 +19,18 @@
   overflow: hidden;
 }
 
+.greeting {
+  color: lightcyan;
+  font-size: 3.5vw;
+  text-align: center;
+  font-family: Righteous, Roboto;
+  position: absolute;
+  top: 16%;
+  left: 55vw;
+  opacity: 0;
+  transition: opacity 1.7s;
+}
+
 .mainContainer {
   width: 100%;
   transform: translateY(-4px);
@@ -31,54 +44,87 @@
 
 .servicesContainer {
   width: 100%;
-  height: 500px;
-  margin-top: 30px;
+  height: calc(100vh - 50px);
+  /* margin-top: 30px; */
   display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.sectionContent {
+  /* border: 1px solid red; */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
+.sectionText {
+  /* margin-right: 10px; */
+  color: #331b40;
+}
+
+.sectionTitle {
+  /* border: 1px solid blue; */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto Condensed';
+  color: #452454;
+}
+
+.servicesList {
+  list-style-image: url('../assets/musicNote.svg');
+  margin-right: 7vw;
+  font-size: 15px;
+}
+
+.servicesList > li {
+  padding-left: 8px;
+}
+
+.ds {
+  display: none;
+}
+
 .aboutMeContainer {
   width: 100%;
-  height: 500px;
+  height: calc(100vh - 50px);
   background-color: #d8cce0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutMeDescription {
+  margin-left: 3vw;
+  margin-right: 3vw;
+  text-align: center;
+}
+
+.aboutMeImgContainer {
+  margin-top: 1vh;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutMeImg {
+  width: 70%;
+  box-shadow: 0px 5px 8px #604d6b;
+  border: 2px solid #452454;
 }
 
 .contactContainer {
   width: 100%;
-  height: 500px;
+  height: calc(100vh - 50px);
   background-color: #452454;
-}
-
-.servicesContent {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ds {
-  height: 300px;
-  margin-left: 10px;
-}
-
-.servicesText {
-  margin-right: 10px;
-}
-
-.greeting {
-  color: lightcyan;
-  font-size: 2vw;
-  text-align: center;
-  font-family: Righteous, Roboto;
-  position: absolute;
-  top: 25%;
-  left: 65vw;
-  opacity: 0;
-  transition: opacity 1.7s;
+  position: relative;
 }
 
 .footer {
   width: 100%;
-  height: 100px;
+  height: 50px;
   background-color: #312d33;
   display: flex;
   justify-content: center;
@@ -88,10 +134,29 @@
   color: lightcyan;
 }
 
+@media (min-width: 450px) {
+  .homeContainer {
+    top: 70px;
+  }
+}
+
 @media (min-width: 1400px) {
   .videoContainer{
     transform: translateY(-35px);
   }
+  
+  .ds {
+    height: 300px;
+    margin-left: 10px;
+    display: unset;
+  } 
+  
+  .greeting {
+    font-size: 2vw;
+    top: 25%;
+    left: 65vw;
+  }
+  
 }
 
 @media (min-width: 1500px) {

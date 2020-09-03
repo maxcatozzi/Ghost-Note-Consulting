@@ -15,6 +15,7 @@ function Navbar() {
   const [navPosition, setNavPosition] = useState('');
 
   const toggleNav = () => {
+    console.log('works');
     if (!largeView) {
       if (isNavVisible) {
         setNavPosition('');
@@ -58,9 +59,10 @@ function Navbar() {
         <nav className={`nav ${navPosition}`}>
           <div className='navArea'>
             <div> <Link to='/' onClick={toggleNav} className='navLink'>Home</Link> </div>
+            <div> <Link to='/' onClick={toggleNav} className='navLink'>Services</Link> </div>
             <div><Link to='/' onClick={toggleNav} className='navLink'>About Me</Link></div>
+            <div> <Link to='/' onClick={toggleNav} className='navLink'>Contact</Link> </div>
             <div> <Link to='/Blog' onClick={toggleNav} className='navLink'>Blog</Link> </div>
-            <div> <Link to='/Contact' onClick={toggleNav} className='navLink'>Contact Me</Link> </div>
           </div>
         </nav>
         

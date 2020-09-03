@@ -16,7 +16,6 @@ function App() {
         <Navbar />
         <Route path="/" exact component={Home} />
         <Route path="/Blog" exact component={Blog} />
-        <Route path="/Contact" exact component={Contact} />
         <Route path="/EditBlogPost" exact component={EditBlogPost} />
         <Route path="/NewBlogPost" exact component={NewBlogPost} />
     </Router>
