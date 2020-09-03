@@ -3,8 +3,8 @@ import './Blog.css'
 
 function Blog() {
   return (
-    <div>
-      <h1>Blog!</h1>
+    <div className='mainBlogContainer'>
+      <h1>Blog</h1>
     </div>
   );
 }

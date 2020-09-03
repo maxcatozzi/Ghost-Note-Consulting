@@ -1,13 +1,13 @@
 .header {
   width:100%;
-  height: 70px;
-  position: relative;
+  height: 50px;
+  top: 0;
+  position: fixed;
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -webkit-touch-callout:none;
-
 }
 
 .titleBar {
@@ -37,7 +37,7 @@
 .logo {
   text-decoration: none;
   color: lightcyan;
-  font-size: 23px;
+  font-size: 17px;
 }  
 
 .burger {
@@ -47,6 +47,9 @@
   height: 100%;
   float: right;
   margin-right: 2vw;
+  margin-top: 2px;
+  position: relative;
+  z-index: 11;
 }
 
 .burgerOpen {
@@ -90,6 +93,24 @@
   color: #966dab;
 }
 
+@media (min-width: 450px) {
+  .logo {
+    font-size: 30px;
+  }
+
+  .logoContainer{
+    width: auto;
+  }
+
+  .header {
+    height: 70px;
+  }
+
+  .burger {
+    margin-top: 0px;
+  }
+}
+
 @media (min-width: 800px) {
   .burger {
     display: none;
@@ -107,17 +128,9 @@
     grid-template-rows: none;
     font-size: 16px;
     justify-items: stretch;
+    margin-right: 2vw;
     background-color: #312d33;
     justify-items: right;
   }
 }
 
-@media (min-width: 450px) {
-  .logo {
-    font-size: 30px;
-  }
-
-  .logoContainer{
-    width: auto;
-  }
-}
