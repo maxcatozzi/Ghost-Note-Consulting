@@ -27,38 +27,41 @@ class Home extends React.Component {
           </div>
         </div>
         <div className='mainContainer'>
-          <div className='servicesContainer'>
+          <div className='servicesContainer sectionContainer'>
             <div className='sectionContent'>
               <div className='sectionText'>
                 <div className='sectionTitle'>
                   <h1>Services</h1>
                 </div>
-                <ul className='servicesList'>
-                  <li>“Why, you stuck-up, half-witted, scruffy-looking nerf herder!” — Leia Organa</li>
-                  <li>“The Force will be with you. Always.” — Obi-Wan Kenobi</li>
-                  <li>“I find your lack of faith disturbing.” — Darth Vader</li>
-                  <li>“Help me, Obi-Wan Kenobi. You’re my only hope.” — Leia Organa</li>
-                </ul>
+                <div className='servicesListContainer'>
+                  <ul className='servicesList'>
+                    <li>“Why, you stuck-up, half-witted, scruffy-looking nerf herder!” — Leia Organa</li>
+                    <li>“The Force will be with you. Always.” — Obi-Wan Kenobi</li>
+                    <li>“I find your lack of faith disturbing.” — Darth Vader</li>
+                    <li>“Help me, Obi-Wan Kenobi. You’re my only hope.” — Leia Organa</li>
+                    <li>"Luke, I am your Father!" — Darth Vader</li>
+                  </ul>
+                  </div>
               </div>
               <div className='servicesPic'>
                 <img className='ds' alt='death star' src='https://www.centives.net/S/wp-content/uploads/2014/03/032314_0747_HowMuchWoul1.png' />
               </div>
             </div>
           </div>
-          <div className='aboutMeContainer'>
+          <div className='aboutMeContainer sectionContainer'>
             <div className='sectionContent aboutMeContent'>
-              <div className='sectionText'>
-                <h1 className='sectionTitle'>About Me</h1>
+              <div className='aboutMeImgContainer'>
+                <img className='aboutMeImg' alt='yoda' src={yoda}/>
+              </div>
+              <div className='sectionText aboutMeText'>
+                <div className='sectionTitle'>
+                  <h1>About Me</h1>
+                </div>
                 <div className='aboutMeDescription'>
                   <p>A really cool dude, Mark is. Many qualifications, he does have. Help you with all of your consulting needs, he will.</p>
                   <p>A really cool dude, Mark is. Many qualifications, he does have. Help you with all of your consulting needs, he will.</p>
+                  <p>A really cool dude, Mark is. Many qualifications, he does have. Help you with all of your consulting needs, he will.</p>
                 </div>
-              </div>
-              <div className='aboutMeImgContainer'>
-                <img
-                  className='aboutMeImg'
-                  alt='yoda'
-                  src={yoda}/>
               </div>
             </div>
           </div>

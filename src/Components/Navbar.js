@@ -7,7 +7,7 @@ import { useMediaQuery } from 'react-responsive';
 
 function Navbar() {
   const largeView = useMediaQuery({
-    query: '(min-width: 800px)'
+    query: '(min-width: 1025px)'
   })
 
   const [isNavVisible, setIsNavVisible] = useState(false);
@@ -58,7 +58,6 @@ function Navbar() {
       {(largeView || isNavVisible) && (
         <nav className={`nav ${navPosition}`}>
           <div className='navArea'>
-            <div> <Link to='/' onClick={toggleNav} className='navLink'>Home</Link> </div>
             <div> <Link to='/' onClick={toggleNav} className='navLink'>Services</Link> </div>
             <div><Link to='/' onClick={toggleNav} className='navLink'>About Me</Link></div>
             <div> <Link to='/' onClick={toggleNav} className='navLink'>Contact</Link> </div>

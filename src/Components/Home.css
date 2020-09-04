@@ -45,14 +45,12 @@
 .servicesContainer {
   width: 100%;
   height: calc(100vh - 50px);
-  /* margin-top: 30px; */
   display: flex;
   justify-content: center;
   position: relative;
 }
 
 .sectionContent {
-  /* border: 1px solid red; */
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -61,12 +59,10 @@
 }
 
 .sectionText {
-  /* margin-right: 10px; */
   color: #331b40;
 }
 
 .sectionTitle {
-  /* border: 1px solid blue; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -82,10 +78,13 @@
 
 .servicesList > li {
   padding-left: 8px;
+  margin-bottom: 3vh;
 }
 
 .ds {
   display: none;
+  box-shadow: 0px 5px 8px #604d6b;
+  border: 2px solid #452454;
 }
 
 .aboutMeContainer {
@@ -95,6 +94,10 @@
   position: relative;
   display: flex;
   justify-content: center;
+}
+
+.aboutMeContent {
+  flex-direction: column-reverse;
 }
 
 .aboutMeDescription {
@@ -134,9 +137,101 @@
   color: lightcyan;
 }
 
+@media (min-width:325px) {
+  .aboutMeImg {
+    width: 85%;
+  }
+
+  .servicesList {
+    font-size: 17px;
+  }
+}
+
 @media (min-width: 450px) {
   .homeContainer {
     top: 70px;
+  }
+}
+
+@media (min-width: 700px) {
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .sectionContainer {
+    height: 670px;
+  }
+
+  .servicesListContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .servicesList {
+    font-size: 19px;
+    width: 70%;
+    margin-right: unset;
+  }
+
+  .aboutMeDescription > p {
+    font-size: 17px;
+  }
+
+  .aboutMeImg {
+    width: 55%;
+  }
+}
+
+@media (min-width: 1020px) {
+  .servicesContainer{
+    align-items: center;
+    height: 600px;
+  }
+
+  .sectionContent {
+    flex-direction: row;
+  }
+
+  .sectionText {
+    width: 53%;
+  }
+
+  .servicesList {
+    margin-right: unset;
+  }
+
+  .servicesList > li {
+    margin-bottom: 1vh;
+  }
+
+  .ds {
+    height: 300px;
+    margin-left: 10px;
+    display: unset;
+  } 
+
+  .aboutMeContainer{
+    align-items: center;
+    height: 600px;
+  }
+
+  .aboutMeImgContainer {
+    margin-top: unset;
+  }
+
+  .aboutMeImg {
+    width: unset;
+    height: 300px;
+    margin-right: 10px;
+  }
+
+  .sectionText {
+    width: 46vw;
+  }
+
+  .contactContainer {
+    height: 600px;
   }
 }
 
@@ -144,17 +239,23 @@
   .videoContainer{
     transform: translateY(-35px);
   }
-  
-  .ds {
-    height: 300px;
-    margin-left: 10px;
-    display: unset;
-  } 
-  
+    
   .greeting {
     font-size: 2vw;
     top: 25%;
     left: 65vw;
+  }
+
+  .sectionTitle {
+    font-size: 40px;
+  }
+
+  .servicesList {
+    font-size: 22px;
+  }
+
+  .aboutMeDescription > p {
+    font-size: 22px;
   }
   
 }
@@ -164,12 +265,6 @@
     transform: translateY(-70px);
   }
 }
-
-/* @media (min-width: 1600px) {
-  .videoContainer{
-    transform: translateY(-70px);
-  }
-} */
 
 @media (min-width: 2000px) {
   .videoContainer{

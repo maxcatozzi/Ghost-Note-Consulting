@@ -60,7 +60,7 @@
   z-index: 5;
   position: absolute;
   display: grid;
-  grid-template-areas: "." "nav2";
+  grid-template-areas: "." "nav";
   width:100%;
   font-family: Righteous, Roboto;
   transform: translateY(-190px);
@@ -72,7 +72,7 @@
 }
 
 .navArea {
-  grid-area: nav2;
+  grid-area: nav;
   display: grid;
   grid-template-rows: repeat(4, auto);
   grid-row-gap: 20px;
@@ -111,16 +111,18 @@
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1025px) {
   .burger {
     display: none;
   }
 
   .nav {
-    grid-template-areas: ". . nav2";
+    grid-template-areas: ". nav";
     transform: translateY(-55px);
     transition: none;
     z-index: 11;
+    width: calc(100% - 500px);
+    margin-left: 500px;
   }
 
   .navArea {
