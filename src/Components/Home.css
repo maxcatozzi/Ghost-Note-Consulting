@@ -191,6 +191,8 @@
 
   .sectionContent {
     flex-direction: row;
+    width: 90%;
+    height: 80%;
   }
 
   .sectionText {
@@ -199,6 +201,7 @@
 
   .servicesList {
     margin-right: unset;
+    width: unset;
   }
 
   .servicesList > li {
@@ -206,7 +209,8 @@
   }
 
   .ds {
-    height: 300px;
+    height: unset;
+    width: 435px;
     margin-left: 10px;
     display: unset;
   } 
@@ -216,13 +220,18 @@
     height: 600px;
   }
 
+  .aboutMeText {
+    transform: translateY(-46px);
+  }
+
   .aboutMeImgContainer {
     margin-top: unset;
   }
 
   .aboutMeImg {
     width: unset;
-    height: 300px;
+    height: unset;
+    width: 435px;
     margin-right: 10px;
   }
 
@@ -236,7 +245,7 @@
 }
 
 @media (min-width: 1400px) {
-  .videoContainer{
+  .videoContainer, .mainContainer {
     transform: translateY(-35px);
   }
     
@@ -261,13 +270,19 @@
 }
 
 @media (min-width: 1500px) {
-  .videoContainer{
+  .videoContainer, .mainContainer {
     transform: translateY(-70px);
   }
 }
 
+@media (min-width: 2100px) {
+  .sectionContent {
+    width: 60%;
+  }
+}
+
 @media (min-width: 2000px) {
-  .videoContainer{
+  .videoContainer, .mainContainer {
     transform: translateY(-75px);
   }
 }
