@@ -18,7 +18,7 @@ class Home extends React.Component {
     return (
       <div className='homeContainer'>
         <div className='videoContainer'>
-          <video className='recordVid'autoPlay loop muted>
+          <video className='recordVid' autoPlay loop muted>
             <source src={video} type='video/mp4' />
           </video>
           <div className='greeting'>
