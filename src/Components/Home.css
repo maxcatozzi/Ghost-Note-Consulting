@@ -1,13 +1,14 @@
 .homeContainer {
-  position: relative;
-  z-index: -1;
+  height: calc(100vh - 50px);
+  overflow-y: scroll;
   top: 50px;
+  position: relative;
 }
 
 .recordVid {
   object-fit: cover;
   width: 100%;
-  height: 88vh;
+  height: 87vh;
   object-position: 28%;
   opacity: 0;
   transition: opacity 1.7s;
@@ -18,18 +19,19 @@
   position: relative;
   z-index: -1;
   /* background-color: #312d33; */
-  /* max-height: 85vh; */
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .greeting {
   color: lightcyan;
-  font-size: 3.5vw;
+  font-size: 6vw;
   text-align: center;
   font-family: Righteous, Roboto;
   position: absolute;
-  top: 16%;
-  left: 55vw;
+  top: 56%;
+  /* left: 55vw; */
   opacity: 0;
   transition: opacity 1.7s;
 }
@@ -151,12 +153,19 @@
 }
 
 @media (min-width: 450px) {
-  .homeContainer {
-    top: 70px;
-  }
 }
 
 @media (min-width: 700px) {
+
+  .recordVid {
+    height: 91vh;
+  }
+
+  .greeting {
+    font-size: 5vw;
+    top: 54%;
+  }
+
   .sectionTitle {
     font-size: 28px;
   }
@@ -247,6 +256,43 @@
   }
 }
 
+@media (min-width: 1030px) {
+
+  .recordVid{
+    height: 87vh;
+  }
+
+  .homeContainer {
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+    position: relative;
+    top: 70px;
+    /* z-index: -1; */
+  }
+  
+  .homeContainer::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .homeContainer::-webkit-scrollbar-thumb {
+    background: rgb(72,60,77,1);
+  }
+  
+  .homeContainer::-webkit-scrollbar-track {
+    background: rgb(49,45,51,0.7);
+  }  
+
+  .videoContainer {
+    display: block;
+    justify-content: unset;  
+  }
+  .greeting {
+    top: 16%;
+    left: 55vw;  
+    font-size: 3.5vw;
+  }
+}
+
 @media (min-width: 1400px) {    
   .greeting {
     font-size: 2vw;
@@ -254,6 +300,7 @@
     left: 65vw;
   }
 
+  
   .sectionTitle {
     font-size: 40px;
   }

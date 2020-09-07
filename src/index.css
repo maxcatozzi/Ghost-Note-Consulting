@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* firefox scrollbar - they are in the process of changing the spec */
+  /* scrollbar-width: thin;          
+  scrollbar-color: rgb(72,60,77,1) rgb(49,45,51,0.5);    */
 }
 
 code {
