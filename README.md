@@ -71,4 +71,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 ### Dependencies to install
 
 npm install
-npm install react-router-dom
+npm i react-router-dom
+npm i passport
+npm i passport-local
+npm i cookie-parser 
+npm i bcrypt
+npm i passport-jwt
+npm i jsonwebtoken
+npm i --save-dev jest
+npm i useMediaQuery
+npm i @shelf/jest-mongodb --save-dev

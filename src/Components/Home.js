@@ -27,7 +27,7 @@ class Home extends React.Component {
           </div>
         </div>
         <div className='mainContainer'>
-          <div className='servicesContainer sectionContainer'>
+          <section className='servicesContainer sectionContainer'>
             <div className='sectionContent'>
               <div className='sectionText'>
                 <div className='sectionTitle'>
@@ -47,8 +47,8 @@ class Home extends React.Component {
                 <img className='ds' alt='death star' src='https://www.centives.net/S/wp-content/uploads/2014/03/032314_0747_HowMuchWoul1.png' />
               </div>
             </div>
-          </div>
-          <div className='aboutMeContainer sectionContainer'>
+          </section>
+          <section className='aboutMeContainer sectionContainer'>
             <div className='sectionContent aboutMeContent'>
               <div className='aboutMeImgContainer'>
                 <img className='aboutMeImg' alt='yoda' src={yoda}/>
@@ -64,8 +64,8 @@ class Home extends React.Component {
                 </div>
               </div>
             </div>
-          </div>
-          <div className='contactContainer'><Contact /></div>
+          </section>
+          <section className='contactContainer'><Contact /></section>
           <footer className='footer'>© 2020 by Kayax
           </footer>
         </div>
