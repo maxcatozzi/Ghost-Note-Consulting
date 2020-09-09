@@ -62,5 +62,12 @@ router.delete('/delete/:id', passport.authenticate('jwt', { session: false }), (
     });
 });
 
+router.delete('/deleteAll', () => {
+  BlogPost.deleteMany({'title': "testTitle"}, function (err) {
+    if(err) console.log(err);
+    console.log("Successful deletion");
+  });
+})
+
 
 module.exports = router;
