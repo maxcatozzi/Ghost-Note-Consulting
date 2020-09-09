@@ -128,8 +128,9 @@
 
   .navArea {
     grid-template-columns: repeat(4, auto);
+    column-gap: 10px;
     grid-template-rows: none;
-    font-size: 16px;
+    font-size: 20px;
     justify-items: stretch;
     margin-right: 2vw;
     background-color: #312d33;
@@ -137,3 +138,8 @@
   }
 }
 
+@media (min-width:1900px) {
+  .navArea {
+    column-gap: 0px;
+  }
+}
