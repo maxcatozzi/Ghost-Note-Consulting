@@ -43,8 +43,7 @@
   opacity: 0;
   transition: opacity 1.7s;  
   position: relative;
-  z-index: -1;
-
+  /* z-index: -1; */
 }
 
 .servicesContainer {
@@ -128,6 +127,8 @@
   height: calc(100vh - 50px);
   background-color: #452454;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .footer {

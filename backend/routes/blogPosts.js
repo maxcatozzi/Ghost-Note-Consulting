@@ -1,8 +1,6 @@
 const router = require('express').Router();
 let BlogPost = require('../models/blogPost.model');
 const passport = require('passport');
-const passportConfig = require('../passport');
-const JWT = require('jsonwebtoken');
 
 //gets all blog posts
 router.get('/',(req, res) => {
