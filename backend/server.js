@@ -3,7 +3,6 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 
-
 require('dotenv').config();
 
 const app = express();
@@ -14,7 +13,6 @@ app.use(express.json());
 app.use(cookieParser());
 
 const uri = process.env.ATLAS_URI;
-console.log(process.env);
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 const connection = mongoose.connection;
 connection.once('open', () => {
@@ -23,10 +21,14 @@ connection.once('open', () => {
 
 const blogPostsRouter = require('./routes/blogPosts');
 const usersRouter = require('./routes/users');
+const emailsRouter = require('./routes/emails');
 
 app.use('/blogPosts', blogPostsRouter);
 app.use('/users', usersRouter);
+app.use('/emails', emailsRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
+
+

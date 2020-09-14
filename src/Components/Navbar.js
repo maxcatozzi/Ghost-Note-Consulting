@@ -15,7 +15,6 @@ function Navbar() {
   const [navPosition, setNavPosition] = useState('');
 
   const toggleNav = () => {
-    console.log('works');
     if (!largeView) {
       if (isNavVisible) {
         setNavPosition('');
