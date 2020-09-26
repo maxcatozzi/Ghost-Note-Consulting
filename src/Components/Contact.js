@@ -63,18 +63,30 @@ class Contact extends Component {
   render() {
     return (
       <div className='contactContent'>
-        <h1>Shoot Me An Email!</h1>
-        <form onSubmit={this.handleSubmit}>
-          <div><input name='name' value={this.state.name} type='text' placeholder='Your Name' onChange={this.handleChange}></input></div>
-          <div><input name='email' value={this.state.email} type='text' placeholder='Your Email' onChange={this.handleChange}></input></div>
-          <div><input name='phoneNumber' value={this.state.phoneNumber} type='text' placeholder='Your Phone Number' onChange={this.handleChange}></input></div>
-          <div><button type='submit'>Submit</button></div>
-        </form>
-        <ReCAPTCHA
-          sitekey='6LcBOswZAAAAABoklOrxUh4u6eF0f52vKue87Fys'
-          onChange={this.verifyRecaptcha}
-          theme='dark'
-        />
+        <h1 className='contactHeader'>Say Hi!</h1>
+        <div><p className='contactDescription'>If you'd like for me to reach out to you with more information about my services, fill out this form and I will get back to you promptly!</p></div>
+        <div className='contactSection'>
+          <form className='contactForm' onSubmit={this.handleSubmit}>
+            <div className='formItem'><input className='contactInput' name='name' value={this.state.name} type='text' placeholder='Your Name' onChange={this.handleChange}></input></div>
+            <div className='formItem'><input className='contactInput' name='email' value={this.state.email} type='text' placeholder='Your Email' onChange={this.handleChange}></input></div>
+            <div className='formItem'><input className='contactInput' name='phoneNumber' value={this.state.phoneNumber} type='text' placeholder='Your Phone Number' onChange={this.handleChange}></input></div>
+            
+            {(!this.state.isVerified) && (
+            <div className='contactSection formItem'>
+              <ReCAPTCHA
+              sitekey='6LcBOswZAAAAABoklOrxUh4u6eF0f52vKue87Fys'
+              onChange={this.verifyRecaptcha}
+              theme='dark'
+              />
+            </div>
+            )}
+
+            {(this.state.isVerified) && (
+              <div className='formItem'><button className='contactSubmit' type='submit'>Send</button></div>              
+            )}
+            
+          </form>
+        </div>
       </div>
     );
   }
