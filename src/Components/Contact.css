@@ -80,3 +80,45 @@
     margin-top: 3vh;
   }
 }
+
+@media (min-width: 700px) {
+  .contactContent {
+    width: 70%;
+  }
+
+  .headerContainer {
+    font-size: 28px;
+  }
+
+  .contactDescription {
+    font-size: 17px;
+  }
+
+  .contactInput {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1020px) {
+  .formItem {
+    margin-bottom: 3vh;
+  }
+
+  .contactDescription {
+    margin-bottom: 4vh;
+  }
+}
+
+@media (min-width: 1400px) {
+  .contactContent {
+    width: 50%;
+  }
+
+  .headerContainer {
+    font-size: 40px;
+  }
+
+  .contactInput {
+    width: 33vw;
+  }
+}

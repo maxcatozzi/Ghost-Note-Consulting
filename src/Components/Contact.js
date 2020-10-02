@@ -63,7 +63,7 @@ class Contact extends Component {
   render() {
     return (
       <div className='contactContent'>
-        <h1 className='contactHeader'>Say Hi!</h1>
+        <div className='headerContainer'><h1 className='contactHeader'>Say Hi!</h1></div>
         <div><p className='contactDescription'>If you'd like for me to reach out to you with more information about my services, fill out this form and I will get back to you promptly!</p></div>
         <div className='contactSection'>
           <form className='contactForm' onSubmit={this.handleSubmit}>

@@ -2,7 +2,9 @@ import React from 'react';
 import video from '../video/record_vid.mp4'; 
 import './Home.css';
 import Contact from './Contact';
-import yoda from '../assets/yoda.jpg';
+import mark from '../assets/Mark Patton.jpg';
+import ygt from '../assets/ygt_small.jpg';
+
 
 class Home extends React.Component {
 
@@ -22,11 +24,31 @@ class Home extends React.Component {
             <source src={video} type='video/mp4' />
           </video>
           <div className='greeting'>
-            <h1>Cool Slogan</h1>
-            <h2>Another cool slogan</h2>
+            <h1>Real consulting</h1>
+            <h2>for Real musicians</h2>
           </div>
         </div>
         <div className='mainContainer'>
+          <section className='aboutMeContainer sectionContainer'>
+            <div className='sectionContent aboutMeContent'>
+              <div className='aboutMeImgContainer'>
+                <img className='aboutMeImg' alt='Mark Patton' src={mark}/>
+              </div>
+              <div className='sectionText aboutMeText'>
+                <div className='sectionTitle'>
+                  <h1>About Me</h1>
+                </div>
+                <div className='aboutMeDescription'>
+                  <p>My name is Mark Patton, and I am a licensed Marriage and Family Therapist practicing in California. I have a deep appreciation for music and those who make it happen, including musicians, roadies, managers, producers and all involved in the process of bringing live music to the public. I understand that travelling music industry professionals struggle with many personal and emotional stressors, from missing loved ones to the basic challenges that come with the lifestyle.</p>
+
+                  <p>I was inspired to begin my consulting services by the New Orleans Jazz and Heritage Festival, which I religiously attended annually since before the Katrina disaster and before COVID-19. My passion is to help those that bring the life to live music.</p>
+
+                  <p>I have been practicing in Northern California (Morgan Hill area) since 2013 and I'm interested in improving the well-being of all those with like minded, creative and musically inspired minds!</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <section className='servicesContainer sectionContainer'>
             <div className='sectionContent'>
               <div className='sectionText'>
@@ -35,37 +57,21 @@ class Home extends React.Component {
                 </div>
                 <div className='servicesListContainer'>
                   <ul className='servicesList'>
-                    <li>“Why, you stuck-up, half-witted, scruffy-looking nerf herder!” — Leia Organa</li>
-                    <li>“The Force will be with you. Always.” — Obi-Wan Kenobi</li>
-                    <li>“I find your lack of faith disturbing.” — Darth Vader</li>
-                    <li>“Help me, Obi-Wan Kenobi. You’re my only hope.” — Leia Organa</li>
-                    <li>"Luke, I am your Father!" — Darth Vader</li>
+                    <li>Provides one-on-one consulting services for individuals and families in the music industry that are impacted by elements of travel stress, COVID-19 realated issues, or other basic human stressors</li>
+
+                    <li>Support available on-line to accommodate those on the road or stuck at home</li>
+
+                    <li>Utilizes Doxy.me to provide confidential video sessions</li>
                   </ul>
                   </div>
               </div>
               <div className='servicesPic'>
-                <img className='ds' alt='death star' src='https://www.centives.net/S/wp-content/uploads/2014/03/032314_0747_HowMuchWoul1.png' />
+                <img className='ds' alt='you got this' src={ygt} />
               </div>
             </div>
           </section>
-          <section className='aboutMeContainer sectionContainer'>
-            <div className='sectionContent aboutMeContent'>
-              <div className='aboutMeImgContainer'>
-                <img className='aboutMeImg' alt='yoda' src={yoda}/>
-              </div>
-              <div className='sectionText aboutMeText'>
-                <div className='sectionTitle'>
-                  <h1>About Me</h1>
-                </div>
-                <div className='aboutMeDescription'>
-                  <p>A really cool dude, Mark is. Many qualifications, he does have. Help you with all of your consulting needs, he will.</p>
-                  <p>A really cool dude, Mark is. Many qualifications, he does have. Help you with all of your consulting needs, he will.</p>
-                  <p>A really cool dude, Mark is. Many qualifications, he does have. Help you with all of your consulting needs, he will.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className='contactContainer'><Contact /></section>
+
+          <section className='contactContainer sectionContainer'><Contact /></section>
           <footer className='footer'>© 2020 by Kayax
           </footer>
         </div>
