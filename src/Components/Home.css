@@ -30,8 +30,7 @@
   text-align: center;
   font-family: Righteous, Roboto;
   position: absolute;
-  top: 56%;
-  /* left: 55vw; */
+  bottom: 0;
   opacity: 0;
   transition: opacity 1.7s;
 }
@@ -144,16 +143,12 @@
 }
 
 @media (min-width:325px) {
-  .aboutMeImg {
-    /* width: 85%; */
+  .greeting {
+    bottom: 4vh;
   }
-
   .servicesList {
     font-size: 17px;
   }
-}
-
-@media (min-width: 450px) {
 }
 
 @media (min-width: 700px) {
@@ -163,8 +158,8 @@
   }
 
   .greeting {
-    font-size: 5vw;
-    top: 54%;
+    font-size: 5.5vw;
+    bottom: -1vh;
   }
 
   .sectionTitle {
@@ -191,9 +186,6 @@
     font-size: 17px;
   }
 
-  .aboutMeImg {
-    /* width: 55%; */
-  }
 }
 
 @media (min-width: 1020px) {
@@ -287,20 +279,15 @@
     display: block;
     justify-content: unset;  
   }
+
   .greeting {
-    top: 16%;
-    left: 55vw;  
-    font-size: 3.5vw;
+    font-size: 2.4vw;
+    top: 25%;
+    left: 62vw;
   }
 }
 
-@media (min-width: 1400px) {    
-  .greeting {
-    font-size: 2vw;
-    top: 25%;
-    left: 65vw;
-  }
-
+@media (min-width: 1400px) {  
   
   .sectionTitle {
     font-size: 40px;
@@ -313,10 +300,6 @@
   .aboutMeDescription > p {
     font-size: 22px;
   }
-  
-}
-
-@media (min-width: 1500px) {
 }
 
 @media (min-width: 2100px) {
