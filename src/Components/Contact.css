@@ -103,6 +103,10 @@
 }
 
 @media (min-width: 1020px) {
+  .headerContainer {
+    font-size: 35px;
+  }
+  
   .formItem {
     margin-bottom: 3vh;
   }

@@ -64,7 +64,7 @@ function Home() {
 
         <section id='services' className='servicesContainer sectionContainer'>
           <div className='sectionContent'>
-            <div className='sectionText'>
+            <div className='sectionText servicesText'>
               <div className='sectionTitle'>
                 <h1>Services</h1>
               </div>
@@ -78,8 +78,8 @@ function Home() {
                 </ul>
                 </div>
             </div>
-            <div className='servicesPic'>
-              <img className='ds' alt='you got this' src={ygt} />
+            <div className='servicesPicContainer'>
+              <img className='servicesPic' alt='you got this' src={ygt} />
             </div>
           </div>
         </section>
