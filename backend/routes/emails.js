@@ -8,8 +8,8 @@ router.post('/send', (req, res) => {
   console.log(req.body);
   sendGrid.setApiKey(sendgridKey);
   const msg = {
-    to: 'kayla.folwick@gmail.com',
-    from: 'kayla.folwick@gmail.com',
+    to: 'markpattonlmfcc@gmail.com',
+    from: 'markpattonlmfcc@gmail.com',
     subject: 'A new client has contacted you!',
     text: req.body.message
   }

@@ -47,7 +47,7 @@
 
 .servicesContainer {
   width: 100%;
-  height: calc(100vh - 50px);
+  /* height: calc(100vh - 50px); */
   display: flex;
   justify-content: center;
   position: relative;
@@ -55,7 +55,7 @@
 }
 
 .sectionContent {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -68,10 +68,15 @@
 
 .sectionTitle {
   width: 100%;
+  margin-top: 4vh;
   display: flex;
   justify-content: center;
   font-family: 'Roboto Condensed';
   color: #452454;
+}
+
+.servicesListContainer {
+  margin-bottom: 8vh;
 }
 
 .servicesList {
@@ -93,7 +98,7 @@
 
 .aboutMeContainer {
   width: 100%;
-  height: calc(100vh - 50px);
+  /* height: calc(100vh - 50px); */
   position: relative;
   display: flex;
   justify-content: center;
@@ -111,6 +116,7 @@
 
 .aboutMeImgContainer {
   margin-top: 1vh;
+  margin-bottom: 7vh;
   display: flex;
   justify-content: center;
 }
@@ -123,9 +129,9 @@
 
 .contactContainer {
   width: 100%;
-  height: calc(100vh - 50px);
+  /* height: calc(100vh - 50px); */
   background-color: #452454;
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: center;
 }
@@ -167,7 +173,15 @@
   }
 
   .sectionContainer {
-    height: 670px;
+    /* height: 670px; */
+  }
+
+  .aboutMeImgContainer {
+    margin-top: 3vh;
+  }
+
+  .aboutMeImg {
+    width: 90%;
   }
 
   .servicesListContainer {
@@ -182,8 +196,13 @@
     margin-right: unset;
   }
 
+  .aboutMeDescription {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
   .aboutMeDescription > p {
-    font-size: 17px;
+    font-size: 19px;
   }
 
 }
@@ -231,6 +250,7 @@
 
   .aboutMeImgContainer {
     margin-top: unset;
+    margin-bottom: unset;
   }
 
   .aboutMeImg {

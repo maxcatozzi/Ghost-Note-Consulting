@@ -70,7 +70,7 @@ function Home() {
               </div>
               <div className='servicesListContainer'>
                 <ul className='servicesList'>
-                  <li>Provides one-on-one consulting services for individuals and families in the music industry that are impacted by elements of travel stress, COVID-19 realated issues, or other basic human stressors</li>
+                  <li>Provides one-on-one consulting services for individuals and families in the music industry that are impacted by elements of travel stress, COVID-19 related issues, or other basic human stressors</li>
 
                   <li>Support available on-line to accommodate those on the road or stuck at home</li>
 

@@ -6,6 +6,9 @@
   /* font-family: 'Roboto Condensed'; */
   /* justify-content: center; */
 }
+.headerContainer {
+  margin-top: 4vh;
+}
 
 .contactHeader {
   color: white;
@@ -22,9 +25,9 @@
   margin-bottom: 4vh;
 }
 
-/* .contactSection {
-  border: 1px solid red;
-} */
+.contactSection {
+  margin-bottom: 3vh;
+}
 
 .contactForm {
   display: flex;
@@ -91,7 +94,7 @@
   }
 
   .contactDescription {
-    font-size: 17px;
+    font-size: 19px;
   }
 
   .contactInput {
