@@ -25,7 +25,7 @@
 }
 
 .greeting {
-  color: lightcyan;
+  color: #e5e0de;
   font-size: 6vw;
   text-align: center;
   font-family: Righteous, Roboto;
@@ -60,12 +60,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .sectionText {
   color: #331b40;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .sectionTitle {
@@ -75,12 +75,12 @@
   justify-content: center;
   font-family: 'Roboto Condensed';
   color: #452454;
-  border: 1px solid palevioletred;
+  /* border: 1px solid palevioletred; */
 }
 
 .servicesListContainer {
   margin-bottom: 8vh;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .servicesList {
@@ -95,7 +95,7 @@
 }
 
 .servicesPicContainer {
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .servicesPic {
@@ -127,7 +127,7 @@
   margin-bottom: 7vh;
   display: flex;
   justify-content: center;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .aboutMeImg {
@@ -353,7 +353,14 @@
   }
 }
 
-@media (min-width 1700px){
+@media (min-width: 1600px){
+  .aboutMeContent {
+    padding-left: 3vw;
+  }
+
+  .aboutMeText{
+    width: 55vw;
+  }
   
 }
 

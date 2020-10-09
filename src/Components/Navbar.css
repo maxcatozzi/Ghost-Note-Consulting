@@ -17,7 +17,7 @@
   z-index: 10;
   position: relative;
   background-color: #312d33;
-  color: lightcyan;
+  color: #e5e0de;
   font-family: Righteous, Roboto;
 }
 
@@ -37,7 +37,7 @@
 
 .logo {
   text-decoration: none;
-  color: lightcyan;
+  color: #e5e0de;
   font-size: 17px;
 }  
 

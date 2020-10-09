@@ -103,6 +103,10 @@
 }
 
 @media (min-width: 1020px) {
+  .contactContent {
+    width: 700px;
+  }
+
   .headerContainer {
     font-size: 35px;
   }
@@ -114,18 +118,20 @@
   .contactDescription {
     margin-bottom: 4vh;
   }
+
+  .contactInput {
+    width: 40vw;
+  }
 }
 
 @media (min-width: 1400px) {
-  .contactContent {
-    width: 50%;
-  }
+
 
   .headerContainer {
     font-size: 40px;
   }
 
   .contactInput {
-    width: 33vw;
+    width: 30vw;
   }
 }
