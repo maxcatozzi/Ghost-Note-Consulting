@@ -1,0 +1,137 @@
+.contactContent {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* font-family: 'Roboto Condensed'; */
+  /* justify-content: center; */
+}
+.headerContainer {
+  margin-top: 4vh;
+}
+
+.contactHeader {
+  color: white;
+  font-family: 'Roboto Condensed';
+}
+
+.contactDescription {
+  color: white;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 0;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-bottom: 4vh;
+}
+
+.contactSection {
+  margin-bottom: 3vh;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formItem {
+  margin-bottom: 5vh;
+}
+
+.contactInput {
+  font-family: 'Roboto Condensed';
+  text-align: center;
+  width: 75vw;
+  height: 30px;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: center;  
+}
+
+:-ms-input-placeholder {  
+  text-align: center; 
+}
+
+.contactSubmit {
+  font-family: 'Roboto Condensed';
+  font-size: 15px;
+  color: white;
+  height: 36px;
+  width: 37vw;
+  margin-top: 3vh;
+  padding: 0;
+  border: none;
+  background-color: #312d33;
+  /* background: none; */
+  box-shadow: 0px 0px 10px 1px rgba(148,117,173,0.98)
+}
+
+@media (min-height: 550px) {
+  .contactDescription {
+    margin-bottom: 8vh;
+    margin-top: 3vh;
+  }
+}
+
+@media (min-width: 700px) {
+  .contactContent {
+    width: 70%;
+  }
+
+  .headerContainer {
+    font-size: 28px;
+  }
+
+  .contactDescription {
+    font-size: 19px;
+  }
+
+  .contactInput {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1020px) {
+  .contactContent {
+    width: 700px;
+  }
+
+  .headerContainer {
+    font-size: 35px;
+  }
+  
+  .formItem {
+    margin-bottom: 3vh;
+  }
+
+  .contactDescription {
+    margin-bottom: 4vh;
+  }
+
+  .contactInput {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 1400px) {
+
+
+  .headerContainer {
+    font-size: 40px;
+  }
+
+  .contactInput {
+    width: 30vw;
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Blog.css';
 import axios from 'axios';
+import comingSoon from '../assets/comingSoon.jpg';
 
 class Blog extends React.Component {
   constructor(props) {
@@ -8,20 +9,25 @@ class Blog extends React.Component {
     this.state = { blogPosts: [] };
   }
 
-  componentDidMount() {
-    axios.get('http://localhost:5000/blogPosts')
-      .then(response => {
-        this.setState({ blogPosts: response.data })
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-  }
+  // componentDidMount() {
+  //   axios.get('http://localhost:5000/blogPosts')
+  //     .then(response => {
+  //       this.setState({ blogPosts: response.data })
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     })
+  // }
 
   render() {
     return (
       <div className='mainBlogContainer'>
-        <h1>A beautiful blog. I am.</h1>
+        <div className='blogPicContainer'>
+          <img className='blogPic' alt='coming soon' src={comingSoon}/>
+        </div>
+
+
+        {/* <h1>A beautiful blog. I am.</h1>
         <div>
           {this.state.blogPosts.map(blogPost => {
             return <div key={blogPost._id}>
@@ -29,7 +35,7 @@ class Blog extends React.Component {
               <p>{blogPost.body}</p>
             </div>
           })}
-        </div>
+        </div> */}
       </div>  
     )
   }

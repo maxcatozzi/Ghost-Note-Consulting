@@ -57,9 +57,9 @@ function Navbar() {
       {(largeView || isNavVisible) && (
         <nav className={`nav ${navPosition}`}>
           <div className='navArea'>
-            <div> <Link to='/' onClick={toggleNav} className='navLink'>Services</Link> </div>
-            <div><Link to='/' onClick={toggleNav} className='navLink'>About Me</Link></div>
-            <div> <Link to='/' onClick={toggleNav} className='navLink'>Contact</Link> </div>
+            <div><Link to='/#aboutMe' onClick={toggleNav} className='navLink'>About Me</Link></div>
+            <div> <Link to='/#services' onClick={toggleNav} className='navLink'>Services</Link> </div>
+            <div> <Link to='/#contact' onClick={toggleNav} className='navLink'>Contact</Link> </div>
             <div> <Link to='/Blog' onClick={toggleNav} className='navLink'>Blog</Link> </div>
           </div>
         </nav>

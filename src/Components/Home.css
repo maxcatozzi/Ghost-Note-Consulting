@@ -25,13 +25,12 @@
 }
 
 .greeting {
-  color: lightcyan;
+  color: #e5e0de;
   font-size: 6vw;
   text-align: center;
   font-family: Righteous, Roboto;
   position: absolute;
-  top: 56%;
-  /* left: 55vw; */
+  bottom: 0;
   opacity: 0;
   transition: opacity 1.7s;
 }
@@ -48,30 +47,40 @@
 
 .servicesContainer {
   width: 100%;
-  height: calc(100vh - 50px);
+  /* height: calc(100vh - 50px); */
   display: flex;
   justify-content: center;
   position: relative;
+  background-color: #d8cce0;
 }
 
 .sectionContent {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* border: 1px solid red; */
 }
 
 .sectionText {
   color: #331b40;
+  /* border: 1px solid blue; */
 }
 
 .sectionTitle {
   width: 100%;
+  margin-top: 4vh;
   display: flex;
   justify-content: center;
   font-family: 'Roboto Condensed';
   color: #452454;
+  /* border: 1px solid palevioletred; */
+}
+
+.servicesListContainer {
+  margin-bottom: 8vh;
+  /* border: 1px solid blue; */
 }
 
 .servicesList {
@@ -85,7 +94,11 @@
   margin-bottom: 3vh;
 }
 
-.ds {
+.servicesPicContainer {
+  /* border: 1px solid green; */
+}
+
+.servicesPic {
   display: none;
   box-shadow: 0px 5px 8px #604d6b;
   border: 2px solid #452454;
@@ -93,8 +106,7 @@
 
 .aboutMeContainer {
   width: 100%;
-  height: calc(100vh - 50px);
-  background-color: #d8cce0;
+  /* height: calc(100vh - 50px); */
   position: relative;
   display: flex;
   justify-content: center;
@@ -112,21 +124,23 @@
 
 .aboutMeImgContainer {
   margin-top: 1vh;
+  margin-bottom: 7vh;
   display: flex;
   justify-content: center;
+  /* border: 1px solid green; */
 }
 
 .aboutMeImg {
-  width: 70%;
+  width: 75%;
   box-shadow: 0px 5px 8px #604d6b;
   border: 2px solid #452454;
 }
 
 .contactContainer {
   width: 100%;
-  height: calc(100vh - 50px);
+  /* height: calc(100vh - 50px); */
   background-color: #452454;
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: center;
 }
@@ -144,16 +158,12 @@
 }
 
 @media (min-width:325px) {
-  .aboutMeImg {
-    width: 85%;
+  .greeting {
+    bottom: 4vh;
   }
-
   .servicesList {
     font-size: 17px;
   }
-}
-
-@media (min-width: 450px) {
 }
 
 @media (min-width: 700px) {
@@ -163,8 +173,8 @@
   }
 
   .greeting {
-    font-size: 5vw;
-    top: 54%;
+    font-size: 5.5vw;
+    bottom: -1vh;
   }
 
   .sectionTitle {
@@ -172,7 +182,15 @@
   }
 
   .sectionContainer {
-    height: 670px;
+    /* height: 670px; */
+  }
+
+  .aboutMeImgContainer {
+    margin-top: 3vh;
+  }
+
+  .aboutMeImg {
+    width: 90%;
   }
 
   .servicesListContainer {
@@ -187,19 +205,21 @@
     margin-right: unset;
   }
 
-  .aboutMeDescription > p {
-    font-size: 17px;
+  .aboutMeDescription {
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
 
-  .aboutMeImg {
-    width: 55%;
+  .aboutMeDescription > p {
+    font-size: 19px;
   }
+
 }
 
 @media (min-width: 1020px) {
   .servicesContainer{
     align-items: center;
-    height: 600px;
+    /* height: 600px; */
   }
 
   .sectionContent {
@@ -212,6 +232,14 @@
     width: 53%;
   }
 
+  .aboutMeText {
+    margin-bottom: 6vh;
+  }
+
+  .sectionTitle {
+    font-size: 35px;
+  }
+
   .servicesList {
     margin-right: unset;
     width: unset;
@@ -221,24 +249,25 @@
     margin-bottom: 1vh;
   }
 
-  .ds {
+  .servicesPic {
     height: unset;
-    width: 435px;
-    margin-left: 10px;
+    width: 427px;
+    margin-left: 39px;
     display: unset;
   } 
 
   .aboutMeContainer{
     align-items: center;
-    height: 600px;
+    /* height: 600px; */
   }
 
   .aboutMeText {
-    transform: translateY(-46px);
+    /* transform: translateY(-46px); */
   }
 
   .aboutMeImgContainer {
     margin-top: unset;
+    margin-bottom: unset;
   }
 
   .aboutMeImg {
@@ -253,7 +282,7 @@
   }
 
   .contactContainer {
-    height: 600px;
+    /* height: 600px; */
   }
 }
 
@@ -287,36 +316,52 @@
     display: block;
     justify-content: unset;  
   }
+
   .greeting {
-    top: 16%;
-    left: 55vw;  
-    font-size: 3.5vw;
+    font-size: 2.4vw;
+    top: 25%;
+    left: 62vw;
   }
 }
 
-@media (min-width: 1400px) {    
-  .greeting {
-    font-size: 2vw;
-    top: 25%;
-    left: 65vw;
-  }
-
+@media (min-width: 1400px) {  
   
   .sectionTitle {
     font-size: 40px;
+  }
+
+  .aboutMeText {
+    width: 57vw;
+  }
+
+  .servicesText {
+    width: 42vw;
+    margin-right: 2vw;
   }
 
   .servicesList {
     font-size: 22px;
   }
 
+  .servicesPic {
+    width: 500px;
+    margin-left: 68px;
+  }
+
   .aboutMeDescription > p {
     font-size: 22px;
   }
-  
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1600px){
+  .aboutMeContent {
+    padding-left: 3vw;
+  }
+
+  .aboutMeText{
+    width: 55vw;
+  }
+  
 }
 
 @media (min-width: 2100px) {
