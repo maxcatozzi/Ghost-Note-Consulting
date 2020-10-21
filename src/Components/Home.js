@@ -84,7 +84,7 @@ function Home() {
           </div>
         </section>
 
-        <section id='contact' className='contactContainer sectionContainer'><Contact /></section>
+        {/* <section id='contact' className='contactContainer sectionContainer'><Contact /></section> */}
         <footer className='footer'>© 2020 by Kayax
         </footer>
       </div>
