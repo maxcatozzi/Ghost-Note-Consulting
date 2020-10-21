@@ -14,6 +14,10 @@ class Contact extends Component {
     }
   }
 
+  componentDidMount() {
+    console.log(this.state.isVerified);
+  }
+
   handleChange = (e) => {
     let change = {};
     change[e.target.name] = e.target.value;
@@ -32,7 +36,7 @@ class Contact extends Component {
   }
 
   verifyRecaptcha = (response) => {
-    console.log(response);
+    console.log('ver rec',response);
     if (response) {
       this.setState({
         isVerified: true
@@ -42,12 +46,12 @@ class Contact extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    if (this.state.isVerified) {
+    // if (this.state.isVerified) {
     const message = {message: `This person would like you to get in contact with them! 
         Name: ${this.state.name} 
         Email: ${this.state.email} 
         Phone Number: ${this.state.phoneNumber}`};
-      axios.post('http://localhost:5000/emails/send', message)
+      axios.post('/emails/send', message)
         .then(res => {
           alert('Your message was sent!');
           console.log('success');
@@ -55,9 +59,9 @@ class Contact extends Component {
         .catch(err => {
           console.log(err);
         })
-    } else {
-      alert('Are you a robot?')
-    }
+    // } else {
+      // alert('Are you a robot?')
+    // }
   }
 
   render() {
@@ -71,19 +75,19 @@ class Contact extends Component {
             <div className='formItem'><input className='contactInput' name='email' value={this.state.email} type='text' placeholder='Your Email' onChange={this.handleChange}></input></div>
             <div className='formItem'><input className='contactInput' name='phoneNumber' value={this.state.phoneNumber} type='text' placeholder='Your Phone Number' onChange={this.handleChange}></input></div>
             
-            {(!this.state.isVerified) && (
-            <div className='contactSection formItem'>
-              <ReCAPTCHA
-              sitekey='6LcBOswZAAAAABoklOrxUh4u6eF0f52vKue87Fys'
-              onChange={this.verifyRecaptcha}
-              theme='dark'
-              />
-            </div>
-            )}
+            {/* {(!this.state.isVerified) && ( */}
+              {/* <div className='contactSection formItem'>
+                <ReCAPTCHA
+                sitekey='6LcBOswZAAAAABoklOrxUh4u6eF0f52vKue87Fys'
+                onChange={this.verifyRecaptcha}
+                theme='dark'
+                />
+              </div> */}
+            {/* )} */}
 
-            {(this.state.isVerified) && (
+            {/* {(this.state.isVerified) && ( */}
               <div className='formItem'><button className='contactSubmit' type='submit'>Send</button></div>              
-            )}
+            {/* )} */}
             
           </form>
         </div>

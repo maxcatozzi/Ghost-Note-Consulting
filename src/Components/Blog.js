@@ -10,7 +10,7 @@ class Blog extends React.Component {
   }
 
   // componentDidMount() {
-  //   axios.get('http://localhost:5000/blogPosts')
+  //   axios.get('/blogPosts')
   //     .then(response => {
   //       this.setState({ blogPosts: response.data })
   //     })
