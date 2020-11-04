@@ -79,5 +79,5 @@ npm i bcrypt
 npm i passport-jwt
 npm i jsonwebtoken
 npm i --save-dev jest
-npm i useMediaQuery
+npm i use-mediaquery
 npm i @shelf/jest-mongodb --save-dev
