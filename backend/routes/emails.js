@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const sendGrid = require('@sendGrid/mail');
+const sendGrid = require('@sendgrid/mail');
 require('dotenv').config();
 
 const sendgridKey = process.env.SENDGRID_API_KEY;

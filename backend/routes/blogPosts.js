@@ -1,5 +1,5 @@
 const router = require('express').Router();
-let BlogPost = require('../models/blogPost.model');
+let BlogPost = require('../models/blogpost.model');
 const passport = require('passport');
 
 //gets all blog posts
