@@ -49,7 +49,7 @@ function Home() {
             </div>
             <div className='sectionText aboutMeText'>
               <div className='sectionTitle'>
-                <h1>About Me</h1>
+                <h1>About Me, the Real Mark Patton</h1>
               </div>
               <div className='aboutMeDescription'>
                 <p>My name is Mark Patton, and I am a licensed Marriage and Family Therapist practicing in California. I have a deep appreciation for music and those who make it happen, including musicians, roadies, managers, producers and all involved in the process of bringing live music to the public. I understand that travelling music industry professionals struggle with many personal and emotional stressors, from missing loved ones to the basic challenges that come with the lifestyle.</p>
