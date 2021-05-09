@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import video from '../video/record_vid.mp4'; 
 import './Home.css';
 import Contact from './Contact';
-import mark from '../assets/Mark Patton.jpg';
+import mark from '../assets/markprofile.jpg';
 import ygt from '../assets/ygt_small.jpg';
 
 
@@ -37,8 +37,8 @@ function Home() {
           <source src={video} type='video/mp4' />
         </video>
         <div className='greeting'>
-          <h1>Real consulting</h1>
-          <h2>for Real musicians</h2>
+          <h1>Counseling Serices</h1>
+          <h2>For Performers</h2>
         </div>
       </div>
       <div className='mainContainer'>
@@ -52,11 +52,11 @@ function Home() {
                 <h1>About Me</h1>
               </div>
               <div className='aboutMeDescription'>
-                <p>My name is Mark Patton, and I am a licensed Marriage and Family Therapist practicing in California. I have a deep appreciation for music and those who make it happen, including musicians, roadies, managers, producers and all involved in the process of bringing live music to the public. I understand that travelling music industry professionals struggle with many personal and emotional stressors, from missing loved ones to the basic challenges that come with the lifestyle.</p>
+                <p>My name is Mark Patton, and I am a licensed Marriage and Family Therapist practicing in California. I have a deep appreciation for music and those who make it happen, including musicians, roadies, managers, producers and all involved in the process of bringing live music to the public. I understand that traveling music industry professionals struggle with many personal and emotional stressors, from missing loved ones to the basic challenges that come with the lifestyle.</p>
 
-                <p>I was inspired to begin my consulting services by the New Orleans Jazz and Heritage Festival, which I religiously attended annually since before the Katrina disaster and before COVID-19. My passion is to help those that bring the life to live music.</p>
+                <p>I was inspired to begin my counseling and psychological consulting services for performers by the New Orleans Jazz and Heritage Festival, which I religiously attended annually since before the Katrina disaster and before COVID-19. My passion is to help those that bring the life to live music.</p>
 
-                <p>I have been practicing in Northern California (Morgan Hill area) since 2013 and I'm interested in improving the well-being of all those with like minded, creative and musically inspired minds!</p>
+                <p>I have been a practicing licensed psychotherapist in Northern California (Morgan Hill area) since 2013 and I'm interested in improving the well-being of all those with like minded, creative and musically inspired minds!</p>
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ function Home() {
               </div>
               <div className='servicesListContainer'>
                 <ul className='servicesList'>
-                  <li>Provides one-on-one consulting services for individuals and families in the music industry that are impacted by elements of travel stress, COVID-19 related issues, or other basic human stressors</li>
+                  <li>Provides psychotherapy and family counseling for individuals in the music and performing industry, and their families, that are impacted by elements of travel stress, COVID-19 related issues, or other basic human stressors</li>
 
                   <li>Support available on-line to accommodate those on the road or stuck at home</li>
 
@@ -84,7 +84,7 @@ function Home() {
           </div>
         </section>
 
-        {/* <section id='contact' className='contactContainer sectionContainer'><Contact /></section> */}
+        <section id='contact' className='contactContainer sectionContainer'><Contact /></section>
         <footer className='footer'>© 2020 by Kayax
         </footer>
       </div>

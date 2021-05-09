@@ -44,7 +44,7 @@ function Navbar() {
       <div className='titleBar'>
         <div className='logoArea'>
           <div className='logoContainer'>
-            <Link to='/' className='logo' >Ghost Note Consulting</Link>
+            <Link to='/' className='logo' >Ghost Note Counseling</Link>
           </div>
         </div>
         <div className={`burger ${burgerColor}`}>
